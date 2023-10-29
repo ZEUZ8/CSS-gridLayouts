@@ -4,7 +4,7 @@
 body{
     /* margin: 20px; */
     font-family: "Poppins";
-    background: #e7eceb;
+    /* background: #e7eceb; */
 }
 ul,li{
     padding: 0;
@@ -21,4 +21,70 @@ header{
     grid-column: span 3;
     text-align: center;
     border-bottom: 1px solid #ddd;
+}
+
+nav{
+    padding: 30px;
+    border-right: 1px solid #ddd;
+}
+nav li{
+    text-decoration: underline ;
+}
+article{
+    padding: 30px;
+}
+article h2{
+    font-size: 3.5rem;
+}
+article img{
+    width: 100%;
+    border-radius: 5px;
+}
+article p{
+    margin-top: 30px;
+    line-height: 2em;
+    color: #777;
+}
+
+aside{
+    padding: 30px;
+    border-left: 1px solid #ddd;
+}
+footer{
+    grid-column: span 3;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding: 30px;
+}
+
+@media screen and (max-width:1200px){
+    nav{
+        grid-column: span 3;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+    nav li{
+        display: inline-block;
+        margin-right: 10px;
+    }
+    article{
+        grid-column: span 2;
+    }
+    aside{
+        padding: 16px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    article, aside, nav{
+        grid-column: span 3;
+    }
+    aside{
+        border-left: none;
+        border-top: 1px solid #ddd;
+    }    
+
+    article h2{
+        font-size: 2.5em;
+    }
 }
